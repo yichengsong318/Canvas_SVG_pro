@@ -1,0 +1,169 @@
+
+
+	.transform {
+	  display: inline-block;
+	  padding: 15px 25px;
+	  font-size: 10px;
+	  cursor: pointer;
+	  text-align: center;
+	  text-decoration: none;
+	  outline: none;
+	  color: #fff;
+	  background-color: rgb(49, 65, 49);
+	  border: none;
+	  border-radius: 14px;
+	  box-shadow: 0 9px #999;
+	}
+	
+	.transform:hover {background-color: #3e8e41}
+	
+	.transform:active {
+	  background-color: #a6c5a752;
+	  box-shadow: 0 5px #666;
+	  transform: translateY(4px);
+	}
+
+	.reload {
+	  display: inline-block;
+	  padding: 15px 25px;
+	  font-size: 10px;
+	  cursor: pointer;
+	  text-align: center;
+	  text-decoration: none;
+	  outline: none;
+	  color: #fff;
+	  background-color: rgb(49, 65, 49);
+	  border: none;
+	  border-radius: 14px;
+	  box-shadow: 0 9px #999;
+	}
+	
+	.reload:hover {background-color: #3e8e87}
+	
+	.reload:active {
+	  background-color: #a6c5a752;
+	  box-shadow: 0 5px #666;
+	  transform: translateY(4px);
+	}
+
+
+	.download {
+	  display: inline-block;
+	  padding: 15px 25px;
+	  font-size: 10px;
+	  cursor: pointer;
+	  text-align: center;
+	  text-decoration: none;
+	  outline: none;
+	  color: #fff;
+	  background-color: rgb(49, 65, 49);
+	  border: none;
+	  border-radius: 14px;
+	  box-shadow: 0 9px #999;
+	}
+	
+	.download:hover {background-color: #3e8e87}
+	
+	.download:active {
+	  background-color: #a6c5a752;
+	  box-shadow: 0 5px #666;
+	  transform: translateY(4px);
+	}
+
+
+	.cnote {
+   font-weight: bold;}
+
+
+   	
+	div {
+		/* width: 100px;
+		height: 100px; */
+		/* background: yellow; */
+		/* box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box; */
+		border: 3px solid transparent;
+	}
+	
+	div.main {
+	/* border: 1px solid black; */
+	outline: 1px dashed black;
+	}
+	div.Corner {
+		/* border: 1px solid black; */
+		outline: 1px dashed black;
+	}
+	div.Radius {
+		/* border: 1px solid black; */
+		outline: 1px dashed black;
+	}
+	div.Left_Outage {
+		/* border: 1px solid black; */
+		outline: 1px dashed black;
+	}
+
+	div.Right_Outage {
+		/* border: 1px solid black; */
+		outline: 1px dashed black;
+	}
+
+	div.Notch {
+		/* border: 1px solid black; */
+		outline: 1px dashed black;
+	}
+
+	div.Miter {
+		/* border: 1px solid black; */
+		outline: 1px dashed black;
+	}
+	
+
+  div.Bottom_Outage {
+    /* border: 1px solid black; */
+	outline: 1px dashed black; }
+	
+  div.SingleHole {
+	/* border: 1px solid black; */
+	outline: 1px dashed black; }
+
+	div.Unotch {
+		/* border: 1px solid black; */
+		outline: 1px dashed black; }
+	
+	
+
+
+ svg {
+	 position: absolute;
+	 /* left:0.1%;
+	 zoom:100%; */
+	 /* left:10%;
+	 width: 80%;
+	 height: 100%; */
+ }
+
+ .draw{
+	 /* position: absolute;
+	 width: 80%;
+	 left: 10%;
+	 height: 1000px; */
+ }
+
+ @media all and (max-width: 767px) {
+	svg {
+		position: absolute;
+		/* left:0.1%;
+		zoom:100%; */
+		left:10%;
+		width: 80%;
+		height: 100%;
+	}
+   
+	.draw{
+		position: absolute;
+		width: 80%;
+		left: 10%;
+		height: 1000px;
+	}
+ }

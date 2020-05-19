@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./index.css">
+  <script language="javascript" type="text/javascript">
+    function dynamicdropdown(listindex)
+    {
+        switch (listindex)
+        {
+			case "Left" :
+			document.getElementById("dis_direction").options[0]=new Option("- - - -","");
+			document.getElementById("dis_direction").options[1]=new Option("Top","Top");
+            document.getElementById("dis_direction").options[2]=new Option("down","Bottom");
+			break;
+			
+			case "Right" :
+			document.getElementById("dis_direction").options[0]=new Option("- - - -","");;
+			document.getElementById("dis_direction").options[1]=new Option("Top","Top");
+            document.getElementById("dis_direction").options[2]=new Option("down","Bottom");
+			break;
+			case "UN_Left" :
+			document.getElementById("UN_dis_direction").options[0]=new Option("- - - -","");
+			document.getElementById("UN_dis_direction").options[1]=new Option("Top","Top");
+            document.getElementById("UN_dis_direction").options[2]=new Option("down","Bottom");
+			break;
+			
+			case "UN_Right" :
+			document.getElementById("UN_dis_direction").options[0]=new Option("- - - -","");;
+			document.getElementById("UN_dis_direction").options[1]=new Option("Top","Top");
+            document.getElementById("UN_dis_direction").options[2]=new Option("down","Bottom");
+			break;
+        }
+        return true;
+    }
+    </script>
+
+    <title>Refactoring</title>
+</head>
+
+<body>
+
+
+<div class="container">
+	<div class="row">
+					
+	<div class="col-md-6">
+
+		<div class = "input">
+
+				<div class="main">
+					<div class="row">
+						
+						<div class="col-md-5">
+							<p><b>Input the Width and Height</b></p>
+							<div class = "Width&&Height">
+								<div class="row">
+									<div class="col-md-5">
+										<input placeholder="width..." class = "width" id = "width" type="text" style="height:24px;width:70px"/>
+									</div>
+									<div class="col-md-5">
+										<input placeholder="height..." class = "height" id = "height" type="text" style="height:24px;width:70px"/>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+
+						<div class="col-md-5">
+							<div class = "Note">
+								<b>
+								<p>Input the Center Note</p>
+							</b>
+								<input placeholder="Center Note..." class = "Note" id = "note" type="text" />
+							</div>
+						</div>
+					</div>
+				</div>	<br/>
+
+				<div class="Corner">
+					<p><b> Corner</b></p>	
+					<div class="row">
+						
+						<div class="col-md-3">
+							<p>Left_Up</p>
+							<div class="left_Up_corner">					
+								<input placeholder="width..." class = "C_width" id = "LU_c_width1" type="text" style="height:24px;width:70px"/>
+								<br/><br/>
+								<input placeholder="height..." class = "C_height" id = "LU_c_height1" type="text" style="height:24px;width:70px"/>
+							</div>
+						</div>
+					
+						<div class="col-md-3">
+							<p>Right_Up</p>
+							<div class="left_Up_corner">						
+								<input placeholder="width..." class = "C_width" id = "RU_c_width1" type="text" style="height:24px;width:70px"/>
+								<br/><br/>
+								<input placeholder="height..." class = "C_height" id = "RU_c_height1" type="text" style="height:24px;width:70px"/>
+							</div>
+						</div>
+					
+						<div class="col-md-3">
+							<p>Left_Bottom</p>	
+							<div class="left_Up_corner">					
+								<input placeholder="width..." class = "C_width" id = "LB_c_width1" type="text" style="height:24px;width:70px"/>
+								<br/><br/>
+								<input placeholder="height..." class = "C_height" id = "LB_c_height1" type="text" style="height:24px;width:70px"/>
+							</div>
+						</div>
+					
+						<div class="col-md-3">
+							<p>Right_Bottom</p>
+							<div class="left_Up_corner">					
+								<input placeholder="width..." class = "C_width" id = "RB_c_width1" type="text" style="height:24px;width:70px"/>
+								<br/><br/>
+								<input placeholder="height..." class = "C_height" id = "RB_c_height1" type="text" style="height:24px;width:70px"/>
+							</div>
+						</div>
+					</div>
+				</div> <br/>
+
+				<div class="Radius">
+					<p><b> Radius</b></p>	
+					<div class="row">
+						
+						<div class="col-md-3">
+							<p>Left_Up</p>
+							<div class="left_Up_radius">					
+								<input placeholder="width..." class = "C_width" id = "LU_r_width1" type="text" style="height:24px;width:70px"/>
+								<br/><br/>
+								<input placeholder="height..." class = "C_height" id = "LU_r_height1" type="text" style="height:24px;width:70px"/>
+							</div>
+						</div>
+					
+						<div class="col-md-3">
+							<p>Right_Up</p>
+							<div class="left_Up_corner">						
+								<input placeholder="width..." class = "C_width" id = "RU_r_width1" type="text" style="height:24px;width:70px"/>	<br/><br/>
+							
+								<input placeholder="height..." class = "C_height" id = "RU_r_height1" type="text" style="height:24px;width:70px"/>
+							</div>
+						</div>
+					
+						<div class="col-md-3">
+							<p>Left_Bottom</p>	
+							<div class="left_Up_corner">					
+								<input placeholder="width..." class = "C_width" id = "LB_r_width1" type="text" style="height:24px;width:70px"/>
+								<br/><br/>
+								<input placeholder="height..." class = "C_height" id = "LB_r_height1" type="text" style="height:24px;width:70px"/>
+							</div>
+						</div>
+					
+						<div class="col-md-3">
+							<p>Right_Bottom</p>
+							<div class="left_Up_corner">					
+								<input placeholder="width..." class = "C_width" id = "RB_r_width1" type="text" style="height:24px;width:70px"/>
+								<br/><br/>
+								<input placeholder="height..." class = "C_height" id = "RB_r_height1" type="text" style="height:24px;width:70px"/>
+							</div>
+						</div>
+					</div>
+				</div>	<br/>
+
+				<div class="Left_Outage">
+					<p><b> Left-Outage </b></p>	
+					<div class="row">
+						
+						<div class="col-md-3">
+							<p >Top Lean Left</p>	
+							<input placeholder=""  id = "topLL" type="text" style="height:24px;width:70px"/> <br/><br/>
+							<p>Top Lean Right</p>	
+							<input placeholder=""  id = "topLR" type="text" style="height:24px;width:70px"/>		
+						</div>
+
+						<div class="col-md-9">
+							<div class="row">
+
+								<div class="col-md-6">
+									<p >Left / Left Elbow</p>	
+									<div class="left_elbow">					
+										<input placeholder="above "  id = "LLL_e_width1" type="text" style="height:21px;width:70px"/><br/>
+										<input placeholder="below"  id = "LLL_e_width2" type="text" style="height:21px;width:70px"/>
+										<br/><br/>
+										<input placeholder="height..."  id = "LLL_e_height1" type="text" size="8"/>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<p >Left / Right Elbow</p>	
+									<div class="left_elbow">	
+
+										<input placeholder="above "  id = "LLR_e_width1" type="text" style="height:21px;width:70px"/><br/>
+										<input placeholder="below"  id = "LLR_e_width2" type="text" style="height:21px;width:70px"/>
+										<br/><br/>
+										<input placeholder="height..."  id = "LLR_e_height1" type="text" size="8"/>
+									</div>
+								</div>
+
+							</div><br/>
+
+							<div class="row">
+								<div class="col-md-6">
+									<p >Right / Left Elbow</p>	
+									<div class="Right_Left_Elbow">					
+										<input placeholder="above "  id = "LRL_e_width1" type="text" style="height:21px;width:70px"/><br/>
+										<input placeholder="below"  id = "LRL_e_width2" type="text" style="height:21px;width:70px"/>
+										<br/><br/>
+										<input placeholder="height..."  id = "LRL_e_height1" type="text" size="8"/>
+									</div>
+								</div>
+							
+								<div class="col-md-6">
+									<p > Right / Right Elbow</p>	
+									<div class="left_elbow">	
+
+										<input placeholder="above "  id = "LRR_e_width1" type="text" style="height:21px;width:70px"/><br/>
+										<input placeholder="below"  id = "LRR_e_width2" type="text" style="height:21px;width:70px"/>
+										<br/><br/>
+										<input placeholder="height..."  id = "LRR_e_height1" type="text" size="8"/>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					
+					</div>
+				</div>	<br/>
+
+				<div class="Right_Outage">
+					<p><b> Right-Outage </b></p>	
+					<div class="row">
+						
+						<div class="col-md-3">
+							<p >Top Lean Left</p>	
+							<input placeholder=""  id = "topLL_R" type="text" style="height:21px;width:70px"/> <br/><br/>
+							<p>Top Lean Right</p>	
+							<input placeholder=""  id = "topLR_R" type="text" style="height:21px;width:70px"/>		
+						</div>
+
+						<div class="col-md-9">
+							<div class="row">
+
+								<div class="col-md-6">
+									<p >Left / Left Elbow</p>	
+									<div class="left_elbow">					
+										<input placeholder="above "  id = "RLL_e_width1" type="text" style="height:21px;width:70px"/><br/>
+										<input placeholder="below"  id = "RLL_e_width2" type="text" style="height:21px;width:70px"/>
+										<br/><br/>
+										<input placeholder="Height"  id = "RLL_e_height1" type="text" style="height:21px;width:70px"/>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+									<p >Left / Right Elbow</p>	
+									<div class="left_elbow">	
+
+										<input placeholder="above "  id = "RLR_e_width1" type="text" style="height:21px;width:70px"/><br/>
+										<input placeholder="below"  id = "RLR_e_width2" type="text" style="height:21px;width:70px"/>
+										<br/><br/>
+										<input placeholder="Height"  id = "RLR_e_height1" type="text" style="height:21px;width:70px"/>
+									</div>
+								</div>
+
+							</div><br/>
+
+							<div class="row">
+								<div class="col-md-6">
+									<p >Right / Left Elbow</p>	
+									<div class="R_Right_Left_Elbow">					
+										<input placeholder="above "  id = "RRL_e_width1" type="text" style="height:21px;width:70px"/><br/>
+										<input placeholder="below"  id = "RRL_e_width2" type="text" style="height:21px;width:70px"/>
+										<br/><br/>
+										<input placeholder="Height"  id = "RRL_e_height1" type="text" style="height:21px;width:70px"/>
+									</div>
+								</div>
+							
+								<div class="col-md-6">
+									<p > Right / Right Elbow</p>	
+									<div class="left_elbow">	
+
+										<input placeholder="above "  id = "RRR_e_width1" type="text" style="height:21px;width:70px"/><br/>
+										<input placeholder="below"  id = "RRR_e_width2" type="text" style="height:21px;width:70px"/>
+										<br/><br/>
+										<input placeholder="Height"  id = "RRR_e_height1" type="text" style="height:21px;width:70px"/>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					
+					</div>	
+				</div>	<br/>
+
+				<div class="Bottom_Outage">
+					<p><b> Bottom-Outage </b></p>	
+				
+					<div class="row">
+						<div class="col-md-6">
+							<div class="row">
+								<div class="col-md-3"></div>
+								<div class="col-md-9">
+									<p >Left to Right Rise</p>	
+									<input placeholder=""  id = "bLR_R" type="text" style="height:21px;width:70px"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<p>Left to Right Fall</p>	
+							<input placeholder=""  id = "bLR_F" type="text" style="height:21px;width:70px"/>		
+						</div>
+					</div>
+					
+				</div> <br/>
+
+				<div class="Notch">
+					<p><b> Notch</b></p>	
+					<div class="row">
+						
+						<div class="col-md-3">
+							<p>Left_Top</p>
+							<div class="left_Up_radius">					
+								<input placeholder="width..."  id = "LT_notch_width1" type="text" style="height:21px;width:70px"/>
+								<input placeholder="sub..."  id = "LT_notch_width2" type="text" style="height:21px;width:70px"/>
+								<br/><br/>
+								<input placeholder="height..." id = "LT_notch_height1" type="text" style="height:21px;width:70px"/>
+								<input placeholder="sub..."  id = "LT_notch_height2" type="text" style="height:21px;width:70px"/>
+							</div>
+						</div>
+					
+						<div class="col-md-3">
+							<p>Right_Top</p>
+							<div class="left_Up_corner">						
+								<input placeholder="width..." id = "RT_notch_width1" type="text" style="height:21px;width:70px"/>
+								<input placeholder="sub..."  id = "RT_notch_width2" type="text" style="height:21px;width:70px"/>
+								<br/><br/>
+								<input placeholder="height..." id = "RT_notch_height1" type="text" style="height:21px;width:70px"/>
+								<input placeholder="sub..."  id = "RT_notch_height2" type="text" style="height:21px;width:70px"/>
+							</div>
+						</div>
+					
+						<div class="col-md-3">
+							<p>Left_Bottom</p>	
+							<div class="left_Up_corner">					
+								<input placeholder="width..."  id = "LB_notch_width1" type="text" style="height:21px;width:70px"/>
+								<input placeholder="sub..."  id = "LB_notch_width2" type="text" style="height:21px;width:70px"/>
+								<br/><br/>
+								<input placeholder="height..." id = "LB_notch_height1" type="text" style="height:21px;width:70px"/>
+								<input placeholder="sub..."  id = "LB_notch_height2" type="text" style="height:21px;width:70px"/>
+							</div>
+						</div>
+					
+						<div class="col-md-3">
+							<p>Right_Bottom</p>
+							<div class="left_Up_corner">					
+								<input placeholder="width..." id = "RB_notch_width1" type="text" style="height:21px;width:70px"/>
+								<input placeholder="sub..."  id = "RB_notch_width2" type="text" style="height:21px;width:70px"/>
+								<br/><br/>
+								<input placeholder="height..." id = "RB_notch_height1" type="text" style="height:21px;width:70px"/>
+								<input placeholder="sub..."  id = "RB_notch_height2" type="text" style="height:21px;width:70px"/>
+							</div>
+						</div>
+					</div>
+				</div>	<br/>
+
+		</div> <br/>
+
+	</div>
+
+	<div class="col-md-6">
+
+		<div class="Miter">
+			<p><b> Miter</b></p>	
+			<div class="row">
+				
+				<div class="col-md-3">
+					<p>Left Miter Back</p>
+					<div class="left_Up_radius">					
+						<input placeholder="angle..." id = "LMB" type="text" style="height:24px;width:70px"/>
+					</div>
+				</div>
+			
+				<div class="col-md-3">
+					<p>Right Miter Back</p>
+					<div class="left_Up_corner">						
+						<input placeholder="angle..." id = "RMB" type="text" style="height:24px;width:70px"/>
+					</div>
+				</div>
+			
+				<div class="col-md-3">
+					<p>Left Miter Front</p>
+					<div class="left_Up_radius">					
+						<input placeholder="angle..." id = "LMF" type="text" style="height:24px;width:70px"/>
+					</div>
+				</div>
+			
+				<div class="col-md-3">
+					<p>Right Miter Front</p>
+					<div class="left_Up_corner">						
+						<input placeholder="angle..." id = "RMF" type="text" style="height:24px;width:70px"/>
+					</div>
+				</div>
+
+			</div>
+		</div>	<br/>
+
+		<div class="SingleHole">
+			<p><b> Hole</b></p>
+
+			<h6> Single Hole</h6>
+			<div class="row">
+
+					<div class="col-md-4">
+						<p>Size</p>
+						<div class="left_Up_corner">						
+							<input placeholder="size..." id = "diameter" type="text" style="height:24px;width:70px"/>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<p>Edge</p>
+						<div class="left_Up_corner">						
+							<select id="set_direct" name="set_direct" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+								<option id = "from" value="from">from... </option>
+								<option id = "Eleft" value="Left">Left</option>
+								<option id = "Eright" value="Right">Right</option>
+							</select>
+							<input  id = "setback" type="text"  style="height:24px;width:60px"/>
+						</div>
+					</div>
+				
+					<div class="col-md-4">
+						<p>Distance</p>
+						<div class="Distance">
+							<script type="text/javascript" language="JavaScript">
+								document.write('<select name="dis_direction" id="dis_direction"><option value="">from...</option></select>')
+								</script>	
+								<noscript>
+									<select id="dis_direction">
+									</select><br/>	
+								</noscript>
+										
+							<input  id = "distance" type="text" style="height:24px;width:60px"/>
+						</div>
+					</div>
+
+			</div>
+
+			<script type="text/javascript" language="JavaScript">
+				document.write('<h6> Double Hole</h6> <div class="row"><div class="col-md-6"><input placeholder="B..." id = "doubleB" type="text" style="height:24px;width:70px"/></div><div class="col-md-6"><input placeholder="C..." id = "doubleC" type="text" style="height:24px;width:70px"/></div></div>')
+				</script>	
+		
+			
+		</div>	<br/>
+
+		<div class="Unotch">
+			<p><b> Unotch</b></p>
+			<div class="row">
+
+					<div class="col-md-3">
+						<p>Size</p>
+						<div class="left_Up_corner">						
+							<input placeholder="size..." id = "UN_diameter" type="text" style="height:24px;width:70px"/>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<p>Edge</p>
+						<div class="left_Up_corner">						
+							<select id="UN_set_direct" name="set_direct" onchange="javascript: dynamicdropdown(this.options[this.selectedIndex].value);">
+								<option id = "from" value="from">from... </option>
+								<option id = "Eleft" value="UN_Left">Left</option>
+								<option id = "Eright" value="UN_Right">Right</option>
+							</select>
+							<input  id = "UN_setback" type="text" style="height:21px;width:70px"/>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<p>Distance</p>
+						<div class="Distance">
+							<script type="text/javascript" language="JavaScript">
+								document.write('<select name="UN_dis_direction" id="UN_dis_direction"><option value="">from...</option></select>')
+								</script>	
+								<noscript>
+									<select id="UN_dis_direction">
+									</select><br/>	
+								</noscript>
+
+							<input  id = "UN_distance" type="text" style="height:20px;width:70px"/>
+						</div>
+					</div>
+
+
+					<div class="col-md-3">
+						<p>distanceB</p>
+						<div class="UN_distanceB">		
+							<input  id = "UN_distanceB" type="text" style="height:24px;width:70px"/>
+						</div>
+					</div>
+
+			</div>
+		
+			
+		</div>	<br/>
+
+
+		<button class = "transform" id = "transform">Transform</button>&nbsp;&nbsp;
+			<button class = "transform" id = "reload">Reload</button>&nbsp;&nbsp;
+			<button class = "transform" id = "download">Download</button>
+			<br/><br/><br/><br/><br/><br/>
+		<div class="draw">
+				
+			<svg id = "editor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1000" height="1000" viewBox="-0.5 -0.5 705 1046" content="&lt;mxfile host=&quot;app.diagrams.net&quot; modified=&quot;2020-04-24T21:18:22.116Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36&quot; etag=&quot;48G3gOLtmPZVEuOFX874&quot; version=&quot;13.0.1&quot; type=&quot;device&quot;&gt;&lt;diagram id=&quot;h9IUNnSQHMLgRTnyzz1D&quot; name=&quot;Page-1&quot;&gt;7Vttd6I4FP41fpSTECDyUdvamTnt2Z52u/PyjYUU2EHjAr7tr98AiQKJihWc2g49p+INXOB5cu99EmIPXU1Wt7EzC+6pR6KeDrxVD133dB1a2GAfmWXNLbZtFxY/Dj1u2xqewv8INwJunYceSSoHppRGaTirGl06nRI3rdicOKbL6mEvNKpedeb4RDI8uU4kW7+GXhoU1oEJtvZPJPQDcWUIeMvEEQdzQxI4Hl2WTOimh65iStNib7K6IlGGnsClOG+8o3VzYzGZpk1O+A6SUQTh4vl6fOv9FXyO8fCxjwovCyea8wfmN5uuBQIxnU89kjkBPTRaBmFKnmaOm7UuGenMFqSTiH2DbPcljKIrGtE4PxeN843ZkzSmP0mpBeQba5Efgz/ZgsQpWZVM/LFuCZ2QNF6zQ3grFmzwTjbgX5dbwhDmtqBEFhZcObyT+BvXWxzZDodSDevNzeruT8ue+It/zB+PX2jwzf3Rt3QFrlaUZghR9pxlgK1/51Q09JM8AIbsAARmq20j2/Ozz2F+7RvPZzGhg3HkZL4eaBQmAaOIX4LdcnGV4hyJUQZrWqWtSs+UTkmNS25yotCfsq8uI4sw+ygjKWTRMuQNk9Dzssso+0m1J7VBPK4Sr9sK5pGCebMr4rF5MvG6qSJ+HBeMfiyCB1jXzArFfShTDHVTpljvimIo7mBf0mR+WIXahVOJGCeZFWXrJVxlyHGmRK2BLQWKXQ0UZLWAjrKgWIexORaRFp4fAvtwiVDkCdQVTBC+SZyaVNKzwqQbLQuUjQoDKlVS0yvlKKwpm41+8WPHCxnitURK2R2E6bq9VGiDKjUmUCVCBTlthPrV0Hv89uVBv3/4Ske266bLiDbRjj7jZtb84Tcy3vlbeAB7QYEAVVGxLAUqhqkBYAKxQRkjCAfaQDfszYa6Kh5AhVpVIIgxkJAAsKwGGEKiD26NyIHZn6wahOvw9cLjjvq0pDvCuutL1SJ7u/ThqFyLqJS6m62IwTbEiPKGm2iR4/Lj61PiS74pUmK5rZVirleDHiqC3sTawOqmUqmJwIeJIFNvmE1JZH06cpIkdHNYnTiVzSVKdkJGvMrchQxYGY89o6CYsHFkuKjOeKgQ4ld4oGGeqQQfumFollWhBOOBZuKqp4TOY5fwk8sTFU38ye4Ybj5JJXc5exsMTiB0cBShPGddFG16E5ibs2a9Bdbsj8gaNjXbapE2hb+OeRM0KWRRMnOmjeQLVskXDPuQVfUxtEqCpXDZnmApF7g2VUtMU9ZXaHZW31YNNlRV9zqMmYIuzprSOOuTrVRdyHqF0M5iGgFZGral2guRrkFDDgFbTget1V/9uHT9nuqvhWzNMqrTZHgAKmOe2nimaXZQua55FsCfK1G89wRvwaMhb8ym+dbYRA2GL++OTYyxhuwS5u2xecB112yqJjWbFPEXZxJG66KMsyZnMiumNZCRsU2iBckqqNSSHZ3/b6wE4G8lcLoSMC1bs21pPm2jCQZaPjspWo03oQ+QSmB+DH0gTerXZ6MajxWgfsBT1wmmwZTzRZcLiar6fFVTqiRH8MxMNXhvc9FMweyVgchWp7KldHZuxlpYuWCo6m4mKTt7VdBVvf2F5XUgvaqWZ7cNRcc2wO4+fFrpPG7I9c5KpwZKm15hpr6K6NV1tO6o41A33vuoaz9t9RfiR9TUPV7r4dc1hw0WkFw0h0VNtLav5HErJB5we24WVaOS30X31xdddL6ae387unt2xqT/x8MiCe6/3z/PQb9BdB/1Wn8HHgrUdkJUH1L0oQIkZGFNsRizjTVISpxaiB/lqpeR4/68xBUuJzGsWG2rK1eZtbPcln3d/vqhyKjbH5Ggm/8B&lt;/diagram&gt;&lt;/mxfile&gt;">
+						<defs>
+							<linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-ffffff-1-ffffff-1-s-0"><stop offset="0%" style="stop-color:#ffffff"/><stop offset="100%" style="stop-color:#ffffff"/>
+				        	</linearGradient>
+			     	    </defs>
+
+		<g>
+					<path id = "LU_curve" d="M 0 0 Q 0 0 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "LD_curve" d="M 0 0 Q 0 0 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "RU_curve" d="M 0 0 Q 0 0 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "RD_curve" d="M 0 0 Q 0 0 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+
+					<path id = "LLine" d="M 163 195 L 163 905" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					
+					<path id = "ULine" d="M 163 195 L 443 195" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "DLine" d="M 163 905 L 443 905" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "RLine" d="M 443 195 L 443 905" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "OLineLU" d="M 163 195 L 163 195" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "OLineRU" d="M 163 195 L 163 195" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "OLineLB" d="M 163 195 L 163 195" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "OLineRB" d="M 163 195 L 163 195" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<!--        dot line -->
+
+					<path id = "L_dot_Line" xmlns="http://www.w3.org/2000/svg" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+
+					<path id = "R_dot_Line" xmlns="http://www.w3.org/2000/svg" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+
+					<path id = "U_dot_Line" xmlns="http://www.w3.org/2000/svg" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+
+					<path id = "D_dot_Line" xmlns="http://www.w3.org/2000/svg" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+
+
+					<!--        Elbow line         -->
+
+					<path id = "L_Elbow_1" d="M 0 0 Q 0 0 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "L_Elbow_2" d="M 0 0 Q 0 0 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "LLL_E_dot_Line_1" xmlns="http://www.w3.org/2000/svg" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+					<path id = "LLL_E_dot_Line_2" xmlns="http://www.w3.org/2000/svg" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+					
+					<path id = "R_Elbow_1" d="M 0 0 Q 0 0 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "R_Elbow_2" d="M 0 0 Q 0 0 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "RLL_E_dot_Line_1" xmlns="http://www.w3.org/2000/svg" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+					<path id = "RLL_E_dot_Line_2" xmlns="http://www.w3.org/2000/svg" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+					
+					
+					
+					<!--         font && Rect      -->
+
+
+					<text width = "100" class = "cnote" id = "cnote" style="font-size: 20px; transform: translate(283px, 320px);" >FLAT</text>
+				
+					<text width = "100" class = "frontletter" id = "frontletter" style="font-size: 15px; transform: translate(285px, 120px);">Front</text>
+				
+					<text width = "100" class = "logo" id = "logo" style="  font-style: italic; font-size: 15px; transform: translate(183px, 890px);">Logo</text>
+
+					<text width = "100" class = "backletter" id = "backletter" style="font-size: 15px; transform: translate(285px, 20px);">Back</text>
+
+
+
+					<rect id = "LU_Rect" x="163" y="195" width="10" height="10" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+
+					<rect id = "RB_Rect" x="433" y="895" width="10" height="10" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+
+					<rect id = "LB_Rect" x="163" y="895" width="10" height="10" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+									
+					<rect id = "RU_Rect" x="433" y="195" width="10" height="10" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+
+
+					<rect id = "LU_Rect1" x="-10000" y="0" width="10" height="10" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+
+					<rect id = "RB_Rect1" x="-10000" y="0" width="10" height="10" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+
+					<rect id = "LB_Rect1" x="-10000" y="0" width="10" height="10" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+					
+					<rect id = "RU_Rect1" x="-10000" y="0" width="10" height="10" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+
+
+					<path id = "U_LineArrow" d="M 163 165 L 443 165" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "UL_Tip" d="M 163 165 L 170 170 L 163 165 L 170 160 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "UR_Tip" d="M 443 165 L 433 170 L 443 165 L 433 160 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "UL_Arrow" d="M 163 175 L 163 155" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "UR_Arrow" d="M 443 175 L 443 155" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id = "R_LineArrow" d="M 520 905 L 520 195" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "RD_Tip" d="M 520.5 905 L 524.5 895 L 520.5 905 L 516.5 895 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "RU_Tip" d="M 520.5 195 L 524.5 205 L 520.5 195 L 516.5 205 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "RU_Arrow" d="M 510 195 L 530 195" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "RD_Arrow" d="M 510 905 L 530 905" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id = "D_LineArrow" d="M 169.37 935 L 432.63 935" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "DL_Tip" d="M 164.12 935 L 171.12 931.5 L 164.12 935 L 171.12 938.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "DR_Tip" d="M 443 935 L 433 938.5 L443 935 L 433 931.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "DL_Arrow" d="M 163 945 L 163 925" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "DR_Arrow" d="M 443 945 L 443 925" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id="L_LineArrow" d="M 52.64 905 L 52.64 195" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "LD_Tip" d="M 52.64 905 L 49.14 895 L 52.64 905 L 56.14 895 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "LU_Tip" d="M 52.64 195 L 56.14 205 L 52.64 195 L 49.14 205 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "LU_Arrow" d="M 40 195 L 65 195" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "LD_Arrow" d="M 40 905 L 65 905" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+
+					<!-- Corner -->
+
+					<path id="C_LU_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "C_LU_DTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_LU_UTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_LU_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id="C_LD_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "C_LD_DTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_LD_UTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_LD_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id="C_UL_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "C_UL_LTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_UL_RTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_UL_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id = "C_UR_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "C_UR_LTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_UR_RTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_UR_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id="C_RU_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "C_RU_DTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_RU_UTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_RU_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id="C_RD_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "C_RD_DTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_RD_UTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_RD_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id = "C_DR_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "C_DR_LTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_DR_RTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_DR_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id = "C_DL_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "C_DL_LTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_DL_RTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "C_DL_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+
+
+
+					<!-- Radius -->
+
+					<path id="R_LU_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "R_LU_DTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_LU_UTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_LU_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id="R_LD_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "R_LD_DTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_LD_UTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_LD_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id="R_UL_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "R_UL_LTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_UL_RTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_UL_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id = "R_UR_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "R_UR_LTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_UR_RTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_UR_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id="R_RU_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "R_RU_DTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_RU_UTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_RU_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id="R_RD_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "R_RD_DTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_RD_UTip" d="M -100000 0 L -100000 0 L -100000 0 L -100000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_RD_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id = "R_DR_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "R_DR_LTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_DR_RTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_DR_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id = "R_DL_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+					<path id = "R_DL_LTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_DL_RTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+					<path id = "R_DL_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<!-- Notch -->
+
+					<path id = "LB_notch_width_path1" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "LB_notch_width_path2" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					
+					<path id = "LB_notch_height_path1" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "LB_notch_height_path2" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					
+					<path id = "RB_notch_width_path1" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "RB_notch_width_path2" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					
+					<path id = "RB_notch_height_path1" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "RB_notch_height_path2" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					
+					<path id = "LT_notch_width_path1" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "LT_notch_width_path2" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					
+					<path id = "LT_notch_height_path1" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "LT_notch_height_path2" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+				
+					<path id = "RT_notch_width_path1" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "RT_notch_width_path2" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+				
+					<path id = "RT_notch_height_path1" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "RT_notch_height_path2" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<path id = "extra_p1" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "extra_p2" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "extra_p3" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "extra_p4" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "extra_p5" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "extra_p6" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "extra_p7" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "extra_p8" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+
+
+					<g id = "upGroup" transform = "translate(268, 145) ">
+						<rect  width="70" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "Top_Width" x="34" y="20" dominant-baseline="middle" text-anchor="middle"  style="font-size: 15px;">28</text>  
+					</g>
+
+					<g id = "rightGroup" transform = "translate(500, 370) rotate(-90 100 100)">
+						<rect  id = "back_rletter" width="70" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text x="34" y="20" dominant-baseline="middle" text-anchor="middle" class = "Right_Height" id = "Right_Height" style="font-size: 15px;">71</text>   		
+					</g>
+					
+					
+					<g id = "leftGroup" transform = "translate(30, 370) rotate(-90 100 100)">
+						<rect  width="70" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text x="34" y="20" dominant-baseline="middle" text-anchor="middle" class = "lef_height" id = "lef_height" style="font-size: 15px;">71</text>  
+					</g>
+					
+								
+					<g id = "downGroup" transform = "translate(275, 918) ">
+						<rect  width="70" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "Bottom_Width" x="34" y="20" dominant-baseline="middle" text-anchor="middle"  style="font-size: 15px;">28</text>  
+					</g>
+
+
+					<!-- Corner Group -->
+
+					<g id = "CLUH_Group" transform = "translate(320000000, 23000000) rotate(-90 100 100)">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text x="28" y="20" dominant-baseline="middle" text-anchor="middle" class = "C_LUH_Letter" id = "C_LUH_Letter" style="font-size: 15px;">170</text>  
+					</g>
+				
+				
+					<g id = "CLUW_Group" transform = "translate(-135000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "C_LUW_Letter" x="26" y="20" dominant-baseline="middle" text-anchor="middle"  style="font-size: 15px;">170</text>  
+					</g>
+
+						
+					<g id = "CRUW_Group" transform = "translate(-5000000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "C_RUW_Letter" x="26" y="20" dominant-baseline="middle" text-anchor="middle" style="font-size: 15px;">170</text>  
+					</g>				
+
+					<g id = "CRUH_Group" transform = "translate(50000000, 23000000) rotate(-90 100 100)">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text x="28" y="20" dominant-baseline="middle" text-anchor="middle" class = "C_RUH_Letter" id = "C_RUH_Letter" style="font-size: 15px;">170</text>  
+					</g>
+								
+					<g id = "CLBW_Group" transform = "translate(-135000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "C_LBW_Letter" x="26" y="20" dominant-baseline="middle" text-anchor="middle"  style="font-size: 15px;">170</text>  
+					</g>
+										
+					<g id = "CLBH_Group" transform = "translate(3200000000, 723000000) rotate(-90 100 100)">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text x="28" y="20" dominant-baseline="middle" text-anchor="middle" class = "C_LBH_letter" id = "C_LBH_letter" style="font-size: 15px;">170</text>  
+					</g>
+				
+					<g id = "CRBW_Group" transform = "translate(-5000000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "C_RBW_Letter" x="26" y="20" dominant-baseline="middle" text-anchor="middle" style="font-size: 15px;">170</text>  
+					</g>
+							
+					<g id = "CRBH_Group" transform = "translate(50000000, 79300000) rotate(-90 100 100)">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text x="28" y="20" dominant-baseline="middle" text-anchor="middle" class = "C_RBH_Letter" id = "C_RBH_Letter" style="font-size: 15px;">170</text>  
+					</g>
+
+
+					<!-- Radius Group -->
+
+					<g id = "RLUH_Group" transform = "translate(320000000, 23000000) rotate(-90 100 100)">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text x="28" y="20" dominant-baseline="middle" text-anchor="middle" class = "C_LUH_Letter" id = "R_LUH_Letter" style="font-size: 15px;">170</text>  
+					</g>
+				
+					<g id = "RLUW_Group" transform = "translate(-135000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "R_LUW_Letter" x="26" y="20" dominant-baseline="middle" text-anchor="middle"  style="font-size: 15px;">170</text>  
+					</g>
+						
+					<g id = "RRUW_Group" transform = "translate(-5000000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "R_RUW_Letter" x="26" y="20" dominant-baseline="middle" text-anchor="middle" style="font-size: 15px;">170</text>  
+					</g>				
+
+					<g id = "RRUH_Group" transform = "translate(50000000, 23000000) rotate(-90 100 100)">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text x="28" y="20" dominant-baseline="middle" text-anchor="middle" class = "C_RUH_Letter" id = "R_RUH_Letter" style="font-size: 15px;">170</text>  
+					</g>
+								
+					<g id = "RLBW_Group" transform = "translate(-135000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "R_LBW_Letter" x="26" y="20" dominant-baseline="middle" text-anchor="middle"  style="font-size: 15px;">170</text>  
+					</g>
+										
+					<g id = "RLBH_Group" transform = "translate(3200000000, 723000000) rotate(-90 100 100)">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text x="28" y="20" dominant-baseline="middle" text-anchor="middle" class = "C_LBH_letter" id = "R_LBH_letter" style="font-size: 15px;">170</text>  
+					</g>
+				
+					<g id = "RRBW_Group" transform = "translate(-5000000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "R_RBW_Letter" x="26" y="20" dominant-baseline="middle" text-anchor="middle" style="font-size: 15px;">170</text>  
+					</g>
+							
+					<g id = "RRBH_Group" transform = "translate(50000000, 79300000) rotate(-90 100 100)">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text x="28" y="20" dominant-baseline="middle" text-anchor="middle" class = "C_RBH_Letter" id = "R_RBH_Letter" style="font-size: 15px;">170</text>  
+					</g>
+
+
+					<!-- Joints -->
+
+					<path id = "BULine" d="M 163 45 L 443 45" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "BLLine" d="M 163 45 L 163 75" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "BDLine" d="M 163 75 L 443 75" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "BRLine" d="M 443 45 L 443 75" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					
+					<path id = "LM_dot" xmlns="http://www.w3.org/2000/svg" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+					<path id = "RM_dot" xmlns="http://www.w3.org/2000/svg" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+
+
+				
+
+					<g id = "LM_letterG" transform = "translate(-5000000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "LM_letter" width = "100" x="26" y="20" dominant-baseline="middle" text-anchor="middle" style="font-size: 15px;">45° Front</text>  
+					</g>
+
+					<g id = "RM_letterG" transform = "translate(-5000000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "RM_letter" width = "100" x="26" y="20" dominant-baseline="middle" text-anchor="middle" style="font-size: 15px;">45° Back</text>  
+					
+					</g>
+					
+
+					<!--single hole-->
+					
+					<ellipse xmlns="http://www.w3.org/2000/svg" id = "singleCircle" cx="165000000000000" cy="3450000000000" rx="5" ry="5" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+				
+					<text width = "100" id = "circleDiameter" style="font-size: 15px; transform: translate(-90000px, 70px);">45° Front</text>
+
+					<path id="S_UL_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "S_UL_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "S_UL_LTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "S_UL_RTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+				
+
+					<path id="S_LU_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "S_LU_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "S_LU_DTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "S_LU_UTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+
+					<g id = "SH_group" transform = "translate(320000000, 23000000) rotate(-90 100 100)">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "SH_letter" x="28" y="20" dominant-baseline="middle" text-anchor="middle" class = "SH_letter"  style="font-size: 15px;">170</text>  
+					</g>
+
+					<g id = "SW_group" transform = "translate(-135000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "SW_letter" x="26" y="20" dominant-baseline="middle" text-anchor="middle"  style="font-size: 15px;">170</text>  
+					</g>
+
+					<!-- double -->
+					<ellipse xmlns="http://www.w3.org/2000/svg" id = "doubleCircle" cx="165000000000000" cy="3450000000000" rx="5" ry="5" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+
+
+					<path id="SD_UL_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "SD_UL_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "SD_UL_LTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "SD_UL_RTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+				
+
+					<path id="SD_LU_Line" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "SD_LU_P" d="M 0 0 L 0 0" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					<path id = "SD_LU_DTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+					<path id = "SD_LU_UTip" d="M -10000 0 L -10000 0 L -10000 0 L -10000 0 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+
+
+					<g id = "SDH_group" transform = "translate(320000000, 23000000) rotate(-90 100 100)">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "SDH_letter" x="28" y="20" dominant-baseline="middle" text-anchor="middle" class = "SH_letter"  style="font-size: 15px;">170</text>  
+					</g>
+
+					<g id = "SDW_group" transform = "translate(-135000, 145) ">
+						<rect  width="50" height="40" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="none" pointer-events="all"/>
+						<text id = "SDW_letter" x="26" y="20" dominant-baseline="middle" text-anchor="middle"  style="font-size: 15px;">170</text>  
+					</g>
+
+
+					<!-- U nortch -->
+
+					<g>
+						<ellipse id ="UNcircle" cx="-120000000" cy="-3000000" rx="10" ry="10" fill="none" stroke="#000000" pointer-events="all"/>
+						
+						<rect id ="UNrect" x="-900000" y="-200000000000" width="30" height="20" fill="url(#mx-gradient-ffffff-1-ffffff-1-s-0)" stroke="#ffffff" pointer-events="all"/>
+						
+						<path id ="UN_upline" d="M 90 20 L 90 20" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+						
+						<path id ="UN_downline" d="M 90 40 L 90 40" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+					</g>
+
+
+				
+		</g>
+					<switch>
+					<g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+					<a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank">
+					<text text-anchor="middle" font-size="10px" x="50%" y="100%">Viewer does not support full SVG 1.1</text></a></switch>
+
+		   </svg>
+				
+		</div>
+
+	</div>
+
+
+</div>
+		
+</body>
+    <!-- <meta name="description" content="math.js | basic usage"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+	<script src="https://unpkg.com/mathjs/dist/math.min.js"></script>
+
+	<script type="text/javascript" src="index.js"></script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+	<script src="https://blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.js"></script>
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.4/rgbcolor.min.js"></script> -->
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/stackblur-canvas/1.4.1/stackblur.min.js"></script> -->
+
+	<script src="https://cdn.jsdelivr.net/npm/canvg/dist/browser/canvg.min.js"></script>
+	
+</html>
